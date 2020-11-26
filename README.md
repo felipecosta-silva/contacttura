@@ -2,12 +2,15 @@
     Contacttura
     <br>
 </h1>
+<div  align="center">
 
-![Badge](https://img.shields.io/static/v1?label=Java&message=language&color=red&style=plastic&logo=Java)
-<br>
-<p align="center"> Projeto incorporado na realização do preparatório da <strong>Fuctura Tecnologia</strong> visando a seleção para a empresa <strong>FlexPag</strong> </p>
+  ![Badge](https://img.shields.io/static/v1?label=Java&message=language&color=red&style=plastic&logo=Java)
+  <br>
+  <p> Projeto incorporado na realização do preparatório da <strong>Fuctura Tecnologia</strong> visando a seleção para a empresa <strong>FlexPag</strong> </p>
+  <br>
+</div>
 
-## Desenvolvimento
+## **Desenvolvimento**
 
 Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub num diretório de sua preferência:
 
@@ -16,16 +19,16 @@ cd "diretorio de sua preferencia"
 git clone https://github.com/felipecosta-silva/contacttura.git
 ```
 
-## Features
+## **Features**
 
 O projeto pode ser usado (o que ele poderia vir a fazer, para que vai servir).
 
-## Configuração
+## **Configuração**
 
 Para executar o projeto, é necessário utilizar o Eclipse, para que o mesmo identifique as dependências necessárias para a execução no repositório .m2 do Maven. Uma vez importado o projeto, será criado um arquivo *.classpath* que irá informar qual a classe principal para a execução.
 
 
-## Testes
+## **Testes**
 
 Para rodar os testes, utilize o comando abaixo:
 
