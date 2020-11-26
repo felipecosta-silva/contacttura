@@ -10,9 +10,9 @@
   <br>
 </div>
 
-## **Desenvolvimento**
+## **Desenvolvimento** :chart_with_upwards_trend:
 
-Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub num diretório de sua preferência:
+Para iniciar o desenvolvimento, é necessário clonar :arrow_down: o projeto do GitHub num diretório de sua preferência:
 
 ```shell
 cd "diretorio de sua preferencia"
@@ -23,12 +23,12 @@ git clone https://github.com/felipecosta-silva/contacttura.git
 
 O projeto pode ser usado (o que ele poderia vir a fazer, para que vai servir).
 
-## **Configuração**
+## **Configuração** :gear:
 
 Para executar o projeto, é necessário utilizar o Eclipse, para que o mesmo identifique as dependências necessárias para a execução no repositório .m2 do Maven. Uma vez importado o projeto, será criado um arquivo *.classpath* que irá informar qual a classe principal para a execução.
 
 
-## **Testes**
+## **Testes** :clipboard:
 
 Para rodar os testes, utilize o comando abaixo:
 
@@ -45,7 +45,7 @@ mvn test
   - Instale as dependências do *commitlint* na raíz do projeto para a verificação dos commits: `npm install` ou `yarn`;
   - Faça o *commit* das suas alterações seguindo as [convenções de commit](https://www.conventionalcommits.org/pt-br/v1.0.0-beta.4/), adicione na descrição o id da sua Issue em parênteses e lembre de fechar a sua Issue com o id no rodapé do commit:
 
-    - Faça um *push* para a sua *branch*: `git push origin feat/minhaFeature`;
+  - Faça um *push* para a sua *branch*: `git push origin feat/minhaFeature`;
   - Agora é só abrir um *pull request* no repositório que você fez o *fork* e assim que acontecer o *merge* sua Issue será fechada e suas alterações irão fazer parte do projeto;
   - Depois que o *merge* da sua pull request for feito, você pode deletar a sua *branch*.
 
