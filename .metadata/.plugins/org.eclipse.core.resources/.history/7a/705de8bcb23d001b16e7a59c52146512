@@ -1,0 +1,38 @@
+package com.Livrariahotel.Livrariahotel;
+
+import java.util.stream.LongStream;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.Livrariahotel.Livrariahotel.model.Livrariahotel;
+import com.Livrariahotel.Livrariahotel.repository.LivrariahotelRepository;
+
+@SpringBootApplication
+public class LivrariahotelApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(LivrariahotelApplication.class, args);
+		
+	}
+	
+	@Bean
+	CommandLineRunner init(LivrariahotelRepository repository) {
+		return args -> {
+			repository.deleteAll();
+			LongStream.range(0, 9)
+			.mapToObj(i -> {
+				Livrariahotel l = new Livrariahotel();
+				String poeta[] = {"Ariano Suassuna","Jorge Amado","Ferreira Gullar","Aluísio de Azevedo","GOnçalves Dias","Patativa do Assaré","Patativa do Assaré","Graciliano Ramos","Rachel de Queiroz","JOÃO CABRAL DE MELO NETO"};
+				l.setCnpj("Hotel Livraria" + i);
+				l.setRua("Rua " + poeta[i]);
+				return l;
+			})
+			.map(m -> repository.save(m))
+			.forEach(System.out::println);
+		};
+	}
+
+}

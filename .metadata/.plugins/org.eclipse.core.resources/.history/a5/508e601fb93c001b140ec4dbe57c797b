@@ -1,0 +1,7 @@
+package com.contacttura.contacttura;
+
+public class PasswordEncoder {
+	BCryptPpasswordEncoder passwoordEncoder = BCryptPasswordEncoder();
+	
+	System.out.println(passwordEncoder.encode("root"));
+}

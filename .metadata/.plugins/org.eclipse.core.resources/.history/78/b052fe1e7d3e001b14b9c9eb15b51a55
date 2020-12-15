@@ -1,0 +1,6 @@
+package com.contacttura.contacttura.repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository 
+public interface ContactturaUserRepository extends JPARepository<User, Long> {}
