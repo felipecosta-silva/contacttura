@@ -152,6 +152,5 @@ INDEX VERSION 1.131+D:\projects\contacttura\.metadata\.plugins\org.eclipse.jdt.c
 3991135902.index
 2247224413.index
 1853283240.index
-703402010.index
 3446553713.index
 2478357860.index

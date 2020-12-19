@@ -24,9 +24,12 @@ public class ContactturaApplication {
 			LongStream.range(1, 10)
 			.mapToObj(i -> {
 				Contacttura c = new Contacttura();
-				c.setName("Contactura User" + i);
-				c.setEmail("contactura" + i + "@gmail.com");
-				c.setPhone("(081) 9" + i + i + i + i + "-" + i +i +i +i);
+				c.setName("Contacttura User" + i);
+				c.setEmail("contacttura" + i + "@gmail.com");
+				c.setPhone("(081) 9" + i + i + i + (i-1) + "-" + i +i +i +i);
+//				c.setName("Contacttura User" + i);
+//				c.setEmail("contacttura" + i + "@gmail.com");
+//				c.setPhone("(081) 9" + i + i + i + i + "-" + i +i +i +i);
 				return c;
 			})
 			.map(m -> repository.save(m))

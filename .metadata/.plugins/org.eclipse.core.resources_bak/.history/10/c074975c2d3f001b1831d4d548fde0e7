@@ -1,0 +1,58 @@
+package com.contacttura.contacttura.controller;
+
+
+
+@RestController
+@RequestMapping({"/user"})
+public class ContactturaUserController {
+	@Autowired
+	private ContactturaUserRepository repository;
+	
+	
+	//List
+	@GetMapping
+	public List findAll() {
+		return repository.findAll();
+	}
+	
+	//Find by Id
+	@GetMapping(value = "{id}")
+	public ResponseEntity findById(@PathVariable long id) {
+		return repository.findById(id)
+				.map(record -> ResponseEntity.ok().body(record))
+				.orElse(ResponseEntity.notFound().build());
+	}
+	
+	//Create
+	@PostMapping
+	public ContactturaUser create(@RequestBody ContactturaUser contactturaUser) {
+		return repository.save(contactturaUser);
+	}
+	
+	///Update
+	@PutMapping(value = "{id}")
+	public ResponseEntity<ContactturaUser> update(@PathVariable("id") long id,
+			@RequestBody ContactturaUser contactturaUser) {
+		return repository.findById(id)
+				.map(record -> {
+					record.setName(contactturaUser.getName());
+					record.setUsername(contactturaUser.getUsername());.
+					ContactturaUser update = repository.save(record);
+					return ResponseEntity.ok().body(update);
+					
+				}).orElse(ResponseEntity.notFound().build());
+	}
+	
+	
+	@DeleteMapping(path = {"/{id}"})
+	@PreAuthorize("hasRole('ADMIN')")
+	public ResponseEntity <?> delete(@PathVariable long id){
+		return repository.findById(id)
+				.map(record -> {
+					repository.delete(id);
+					
+					retunr RepositoryEntity.ok().build();
+				})orElse(ResposeEntity.ok().build());
+	}
+
+}
