@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.contacttura.contacttura.model.Contacttura;
 import com.contacttura.contacttura.repository.ContactturaRepository;
 
+
+
+
 @RestController
 @RequestMapping({"/contacttura"})
 public class ContactturaController {
@@ -59,9 +62,6 @@ public class ContactturaController {
 				@RequestBody Contacttura contacttura) {
 			return repository.findById(id)
 					.map(record -> {
-//						record.setName(contacttura.getName());
-//						record.setEmail(contacttura.getEmail());
-//						record.setPhone(contacttura.getPhone());
 						record.setName(contacttura.getName());
 						record.setEmail(contacttura.getEmail());
 						record.setPhone(contacttura.getPhone());

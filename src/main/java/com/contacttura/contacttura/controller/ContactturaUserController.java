@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.contacttura.contacttura.model.ContactturaUser;
 import com.contacttura.contacttura.repository.ContactturaUserRepository;
 
+
+
+
 @RestController
 @RequestMapping({"/user"})
 public class ContactturaUserController {
@@ -42,23 +45,25 @@ public class ContactturaUserController {
 	//Create
 	@PostMapping
 	public ContactturaUser create(@RequestBody ContactturaUser contactturaUser) {
-		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-		
-		passwordEncoder.encode("root");
+		contactturaUser.setPassword(criptoPassword(contactturaUser.getPassword()));
 		return repository.save(contactturaUser);
 	}
 	
 	///Update
 	@PutMapping(value = "{id}")
-	public ResponseEntity<ContactturaUser> update(@PathVariable("id") long id,
+	public ResponseEntity<?> update(@PathVariable("id") long id,
 			@RequestBody ContactturaUser contactturaUser) {
 		return repository.findById(id)
 				.map(record -> {
+					
 					record.setName(contactturaUser.getName());
 					record.setUsername(contactturaUser.getUsername());
-					ContactturaUser update = repository.save(record);
-					return ResponseEntity.ok().body(update);
+					record.setPassword(criptoPassword(contactturaUser.getPassword()));
+					record.setAdmin(false);
 					
+					ContactturaUser update = repository.save(record);
+					
+					return ResponseEntity.ok().body("Usuário" + update.getUsername()+ " de nome "+update.getName()+" foi atualizado com sucesso!! \n\n");
 				}).orElse(ResponseEntity.notFound().build());
 	}
 	
@@ -70,8 +75,20 @@ public class ContactturaUserController {
 				.map(record -> {
 					repository.deleteById(id);
 					
-					return ResponseEntity.ok().build();
-				}).orElse(ResponseEntity.ok().build());
+					return ResponseEntity.ok().body(" Usuário "  + record.getUsername() +  " foi deletado com sucesso!");
+					}).orElse(ResponseEntity.ok().body("Usuário informado não esta na lista de cadastrados\n Por favor, tente novamente com um usuário válido."));
 	}
 
+	//Metodo para criptografar senha
+	private String criptoPassword (String password) {
+		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		String passwordCripto = passwordEncoder.encode(password);
+		
+		return passwordCripto;
+
+	}
 }
+
+	
+
+
