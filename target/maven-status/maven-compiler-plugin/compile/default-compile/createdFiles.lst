@@ -1,4 +1,9 @@
+com\contacttura\contacttura\model\ContactturaUser.class
+com\contacttura\contacttura\repository\ContactturaRepository.class
+com\contacttura\contacttura\controller\ContactturaController.class
+com\contacttura\contacttura\controller\ContactturaUserController.class
+com\contacttura\contacttura\model\Contacttura.class
+com\contacttura\contacttura\repository\ContactturaUserRepository.class
 com\contacttura\contacttura\ContactturaApplication.class
-model\Contacttura.class
-controller\ContactturaController.class
-repository\ContactturaRepository.class
+com\contacttura\contacttura\config\SecurityConfig.class
+com\contacttura\contacttura\PasswordEncoder.class

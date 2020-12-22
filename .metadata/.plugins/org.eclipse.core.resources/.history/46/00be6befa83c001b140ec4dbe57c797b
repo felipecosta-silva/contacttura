@@ -1,0 +1,5 @@
+package com.contacttura.contacttura.config;
+
+public class SecurityConfig {
+
+}

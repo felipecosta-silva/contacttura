@@ -1,0 +1,20 @@
+package com.Livrariahotel.Livrariahotel;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+@SpringBootApplication
+public class LivrariahotelApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(LivrariahotelApplication.class, args);
+		
+	}
+	
+	@Bean
+	CommandLineRunner init(LivrariahotelRepository repository) {
+		
+	}
+
+}

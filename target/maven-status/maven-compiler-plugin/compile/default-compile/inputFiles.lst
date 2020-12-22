@@ -1,4 +1,9 @@
-C:\Users\cliente\Desktop\contacttura\src\main\java\repository\ContactturaRepository.java
-C:\Users\cliente\Desktop\contacttura\src\main\java\controller\ContactturaController.java
-C:\Users\cliente\Desktop\contacttura\src\main\java\model\Contacttura.java
-C:\Users\cliente\Desktop\contacttura\src\main\java\com\contacttura\contacttura\ContactturaApplication.java
+D:\eclipse\contacttura\src\main\java\com\contacttura\contacttura\controller\ContactturaUserController.java
+D:\eclipse\contacttura\src\main\java\com\contacttura\contacttura\repository\ContactturaRepository.java
+D:\eclipse\contacttura\src\main\java\com\contacttura\contacttura\PasswordEncoder.java
+D:\eclipse\contacttura\src\main\java\com\contacttura\contacttura\controller\ContactturaController.java
+D:\eclipse\contacttura\src\main\java\com\contacttura\contacttura\model\ContactturaUser.java
+D:\eclipse\contacttura\src\main\java\com\contacttura\contacttura\ContactturaApplication.java
+D:\eclipse\contacttura\src\main\java\com\contacttura\contacttura\repository\ContactturaUserRepository.java
+D:\eclipse\contacttura\src\main\java\com\contacttura\contacttura\model\Contacttura.java
+D:\eclipse\contacttura\src\main\java\com\contacttura\contacttura\config\SecurityConfig.java

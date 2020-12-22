@@ -1,0 +1,18 @@
+package com.Livrariahotel.Livrariahotel.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.Livrariahotel.Livrariahotel.repositoy.LivrariahotelRepository;
+
+@RestController
+@RequestMapping({"/Livrariahotel"})
+public class LivrariahotelController {
+	
+	private LivrariahotelRepository repository;
+	
+	LivrariahotelController(LivrariahotelRepository livrariahotelRepository){
+		this.repository livrariahotelRepository;
+	}
+
+}

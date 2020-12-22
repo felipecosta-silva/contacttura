@@ -1,0 +1,14 @@
+package com.contacttura.contacttura.config;
+
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnable = true)
+public class SecurityConfig {
+	
+
+	
+	public class
+
+}
